@@ -47,7 +47,7 @@ data <- data0[(data0[,1] == "1/2/2007" | data0[,1] == "2/2/2007"),]
 #data[, 2]<- as.POSIXct(strptime(paste(data[, 1], data[, 2]), "%d/%m/%Y %H:%M:%S"))
 data[, 2] <- as.POSIXct(strptime(paste(data[, 1], data[, 2]), "%d/%m/%Y %T"))
 data[, 3:9]  <- sapply(data[, 3:9], as.numeric)
-png(filename = "figure/plot1.png", width = 480, height = 480)
+png(filename = "plot1.png", width = 480, height = 480)
 hist(data$Global_active_power, main = "Global Active Power",
      xlab = "Global Active Power (kilowatts)",
      ylab = "Frequency", col = "red")

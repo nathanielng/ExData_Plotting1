@@ -46,7 +46,7 @@ Sys.setlocale("LC_TIME", "en_GB")
 data <- data0[(data0[,1] == "1/2/2007" | data0[,1] == "2/2/2007"),]
 data[, 2] <- as.POSIXct(strptime(paste(data[, 1], data[, 2]), "%d/%m/%Y %T"))
 data[, 3:9]  <- sapply(data[, 3:9], as.numeric)
-png(filename = "figure/plot2.png", width = 480, height = 480)
+png(filename = "plot2.png", width = 480, height = 480)
 with(data, plot(Time, Global_active_power, type="l",
                 xlab = "", ylab = "Global Active Power (kilowatts)"))
 dev.off()
